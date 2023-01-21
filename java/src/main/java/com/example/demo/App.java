@@ -26,7 +26,7 @@ public class App {
         Configuration conf = Configuration.getInstance();
 
         CommandRegistry commandRegistry = conf.getCommandRegistry();
-        
+
         String inputFile = commandLineArgs.get(0).split("=")[1];
 
         try(BufferedReader reader = new BufferedReader(new FileReader(inputFile))) {

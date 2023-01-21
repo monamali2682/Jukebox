@@ -17,7 +17,7 @@ public class CommandRegistry {
         commands.remove(commandKeyword);
     }
 
-    private ICommand get(String commandName){
+    private ICommand getCommand(String commandName){
         return commands.get(commandName);
     }
 
@@ -28,7 +28,7 @@ public class CommandRegistry {
 
     public void invokeCommand(String input) {
         List<String> tokens = parse(input);
-        ICommand command = get(tokens.get(0));
+        ICommand command = getCommand(tokens.get(0));
         if(command == null){
             // Handle Exception
             throw new RuntimeException("INVALID COMMAND 🛑");
