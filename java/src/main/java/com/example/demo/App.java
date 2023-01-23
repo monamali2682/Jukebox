@@ -25,7 +25,7 @@ public class App {
 
         Configuration conf = Configuration.getInstance();
 
-        CommandRegistry commandRegistry = conf.getCommandRegistry();
+        CommandRegistry commandregistry = conf.getCommandRegistry();
 
         String inputFile = commandLineArgs.get(0).split("=")[1];
 
@@ -36,7 +36,7 @@ public class App {
                 if (line == null){
                     break;
                 }
-                commandRegistry.invokeCommand(line);
+                commandregistry.invokeCommand(line);
             }
 
         } catch (Exception e) {
