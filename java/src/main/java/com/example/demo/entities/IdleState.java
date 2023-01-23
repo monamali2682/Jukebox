@@ -2,10 +2,10 @@ package com.example.demo.entities;
 
 public class IdleState extends PlayerState {
      // if we want to use parents player attribute, then we must not declare our own player attribute here
-    Player player;
+    Player player; // thi is optional
     IdleState(Player player) {
         super(player);  // sets player variable of parent interface
-        this.player=player;  // sets player variable of self. .. no need to do this, if you are not having your player, but using layer attribute of parent class itslef
+        this.player=player;  // sets player variable of self. .. no need to do this, if you are not having your player, but using player attribute of parent class itslef
        
     }
     public void play(){

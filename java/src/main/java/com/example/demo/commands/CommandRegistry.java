@@ -21,13 +21,13 @@ public class CommandRegistry {
         return commands.get(commandName);
     }
 
-    private List<String> parse(String input){
-        return Arrays.stream(input.split(" ")).collect(Collectors.toList());
+    private List<String> parse(String line){
+        return Arrays.stream(line.split(" ")).collect(Collectors.toList());
     }
 
 
-    public void invokeCommand(String input) {
-        List<String> tokens = parse(input);
+    public void invokeCommand(String line) {
+        List<String> tokens = parse(line);
         ICommand command = getCommand(tokens.get(0));
         if(command == null){
             // Handle Exception
